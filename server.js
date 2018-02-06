@@ -28,7 +28,6 @@ app.use(express.static(path.join(__dirname + '/website')));
 
 
 
-
 // error handling
 
 // 404 errors
