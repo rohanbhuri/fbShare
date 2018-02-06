@@ -1,0 +1,25 @@
+{
+  "name": "sharevideofb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohanbhuri/fbShare.git"
+  },
+  "author": "Rohan K Bhuri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohanbhuri/fbShare/issues"
+  },
+  "homepage": "https://github.com/rohanbhuri/fbShare#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
+}

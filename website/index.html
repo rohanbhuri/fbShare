@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+      <meta charset="UTF-8">
+      <title> Publish </title>
+</head>
+
+<body>
+      <div id='fb-root'></div>
+      <script src='http://connect.facebook.net/en_US/all.js'></script>
+
+      <input type="file" id="myFile">
+
+      <input type="button" value="Publish" onclick="publish(); return false;" />
+
+      <script type="text/javascript">
+            FB.init({
+                  appId: "402759246490055",
+                  status: true,
+                  cookie: true
+            });
+
+            function publish() {
+
+                  var filePath = document.getElementById("myFile").value;
+
+                  console.log(filePath);
+
+                  var feed = {
+                        method: 'feed',
+                        link: 'https://developers.facebook.com/docs/',
+                        href: 'https://pbs.twimg.com/profile_images/839721704163155970/LI_TRk1z_400x400.jpg',
+                        name: 'some random pic testing',
+                        description: 'some random pic testing',
+                        type: 'image',
+                  };
+
+                  function callback(response) {
+                        if (response && response.post_id !== undefined) {
+                              alert('published');
+                        }
+                  }
+
+                  FB.ui(feed, callback);
+            }
+      </script>
+</body>
+</html>
